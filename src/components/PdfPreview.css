@@ -1,0 +1,60 @@
+
+.ufv-pdf-viewer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    background: #525659;
+}
+
+.ufv-pdf-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px;
+    background: #323639;
+    color: #ffffff;
+}
+
+.ufv-pdf-navigation button {
+    padding: 6px 14px;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    background: #45494d;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ufv-pdf-navigation button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.ufv-pdf-page {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.ufv-pdf-page canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.ufv-pdf-status,
+.ufv-pdf-error {
+    padding: 24px;
+    text-align: center;
+}
+
+.ufv-pdf-error {
+    color: #b42318;
+}

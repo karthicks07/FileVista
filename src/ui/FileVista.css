@@ -1,0 +1,221 @@
+
+.ufv-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 450px;
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+}
+
+.ufv-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 68px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.ufv-file-information {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.ufv-file-badge,
+.ufv-file-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ufv-file-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.ufv-file-name {
+    max-width: 350px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ufv-file-extension {
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.ufv-toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ufv-toolbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 7px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ufv-toolbar-button:hover {
+    background: #f3f4f6;
+}
+
+.ufv-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.ufv-preview-area {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    padding: 24px;
+    background: #f8fafc;
+}
+
+.ufv-preview-placeholder,
+.ufv-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 440px;
+    text-align: center;
+}
+
+.ufv-preview-placeholder h3,
+.ufv-empty-state h3 {
+    margin: 20px 0 8px;
+    color: #1f2937;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ufv-preview-placeholder p,
+.ufv-empty-state p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ufv-preview-placeholder .ufv-file-icon {
+    width: 76px;
+    height: 76px;
+    font-size: 16px;
+}
+
+.ufv-pdf {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.ufv-image {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.ufv-video,
+.ufv-audio {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.ufv-document {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.ufv-spreadsheet {
+    background: #ecfdf5;
+    color: #15803d;
+}
+
+.ufv-presentation {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.ufv-text,
+.ufv-code {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.ufv-unknown {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.ufv-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border: 1px dashed #9ca3af;
+    border-radius: 12px;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ufv-container:fullscreen {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+
+.ufv-container:fullscreen .ufv-preview-area {
+    overflow: auto;
+}
+
+@media (max-width: 600px) {
+    .ufv-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ufv-toolbar-actions {
+        width: 100%;
+    }
+
+    .ufv-file-name {
+        max-width: 220px;
+    }
+}

@@ -1,0 +1,206 @@
+
+.ufv-spreadsheet-viewer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 400px;
+    overflow: hidden;
+    background: #ffffff;
+    color: #344054;
+    box-sizing: border-box;
+}
+
+/* Worksheet tabs */
+.ufv-spreadsheet-tabs {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 2px;
+    min-height: 42px;
+    padding: 0 10px;
+    overflow-x: auto;
+    border-bottom: 1px solid #dfe3e8;
+    background: #f8f9fb;
+}
+
+.ufv-spreadsheet-tab {
+    flex-shrink: 0;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: #667085;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ufv-spreadsheet-tab:hover {
+    background: #eef2f6;
+    color: #344054;
+}
+
+.ufv-spreadsheet-tab.active {
+    border-bottom-color: #2563eb;
+    background: #ffffff;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+/* Large spreadsheet notice */
+.ufv-spreadsheet-notice {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0d58c;
+    background: #fff8e6;
+    color: #8a5b00;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Grid */
+.ufv-spreadsheet-grid-container {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+    background: #ffffff;
+}
+
+.ufv-spreadsheet-grid {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: auto;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.ufv-spreadsheet-grid th,
+.ufv-spreadsheet-grid td {
+    min-width: 100px;
+    max-width: 280px;
+    height: 30px;
+    padding: 5px 9px;
+    border-right: 1px solid #e4e7ec;
+    border-bottom: 1px solid #e4e7ec;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ufv-spreadsheet-grid thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 32px;
+    background: #f2f4f7;
+    color: #475467;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ufv-spreadsheet-grid .ufv-spreadsheet-row-header {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 48px;
+    width: 48px;
+    max-width: 48px;
+    background: #f8f9fb;
+    color: #667085;
+    font-weight: 500;
+    text-align: center;
+}
+
+.ufv-spreadsheet-grid thead .ufv-spreadsheet-row-header {
+    z-index: 3;
+    background: #e9edf2;
+}
+
+.ufv-spreadsheet-grid tbody tr:hover td {
+    background: #f8fbff;
+}
+
+.ufv-spreadsheet-grid tbody td {
+    color: #344054;
+    background: #ffffff;
+}
+
+/* Footer */
+.ufv-spreadsheet-footer {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 30px;
+    padding: 5px 12px;
+    border-top: 1px solid #e4e7ec;
+    background: #f8f9fb;
+    color: #667085;
+    font-size: 11px;
+}
+
+/* Loading */
+.ufv-spreadsheet-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 120px;
+    color: #667085;
+    font-size: 13px;
+}
+
+.ufv-spreadsheet-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d0d5dd;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: ufv-spreadsheet-spin 0.8s linear infinite;
+}
+
+@keyframes ufv-spreadsheet-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Empty worksheet */
+.ufv-spreadsheet-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    color: #98a2b3;
+    font-size: 13px;
+}
+
+/* Error */
+.ufv-spreadsheet-error {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #fecdca;
+    border-radius: 6px;
+    background: #fff5f4;
+    color: #555555;
+    text-align: center;
+}
+
+.ufv-spreadsheet-error h3 {
+    margin: 0 0 8px;
+    color: #b42318;
+    font-size: 16px;
+}
+
+.ufv-spreadsheet-error p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
