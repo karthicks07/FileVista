@@ -12,6 +12,7 @@ export interface FileVistaContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     file: DynamicValue<FileValue>;
+    headert?: DynamicValue<string>;
 }
 
 export interface FileVistaPreviewProps {
@@ -26,4 +27,5 @@ export interface FileVistaPreviewProps {
     renderMode: "design" | "xray" | "structure";
     translate: (text: string) => string;
     file: string;
+    headert: string;
 }

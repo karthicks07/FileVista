@@ -18,6 +18,11 @@
                 <caption>File</caption>
                 <description>Select a Mendix file to preview.</description>
             </property>
+            <property key="headert" type="expression" required="false">
+                <caption>Header Text</caption>
+                <description>Expression that displays the centered title in the viewer toolbar.</description>
+                <returnType type="String" />
+            </property>
         </propertyGroup>
     </properties>
 </widget>
